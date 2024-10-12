@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'KG Second Chances Sketch';
+    src: url(../Lettertypes/KGSecondChancesSketch.ttf);
+}
+
+@font-face {
+    font-family: 'Leorio';
+    src: url(../Lettertypes/Leorio.ttf);
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+header
+{
+    background-color: #48577B;
+}
+
+header nav ul
+{
+    list-style: none;
+    color: #48577B;
+    display: inline-block;
+	float: inline;
+}
+
+header nav ul li
+{
+    display: inline-block;
+	float: inline;
+    margin: 20px;
+    text-align: center;
+}
+
+header nav ul li a
+{
+    color: #ffffff;
+    text-decoration: none;
+    margin: 125px;
+    padding: 0px;
+}
+
+header nav ul li a:hover
+{
+    color: #E9AB2F;
+}
+
+h1
+{
+    color: #E9AB2F;
+    font-family: 'KG Second Chances Sketch';
+    font-size: 24px;
+    text-align: center;
+}
+
+p
+{
+    font-family: 'Leorio';
+    font-size: 20px;
+}
+
+main
+{
+    margin: 100px;
+    padding: 0px;
+    background-color: #ffffff;
+    height: 900px;
+}
+
+footer
+{
+    height: 200px;
+}

@@ -1,0 +1,99 @@
+/*Mijn Code*/
+	/*Hoofddeel*/
+
+
+
+body {
+	background-color: #48577B;
+}
+
+.index-wrapper-head {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+nav{
+	width: 100%;
+	height: 50px;
+	background-color: #ffffff;
+	padding: 0px 50px;
+	
+}
+
+.index-wrapper-head ul {
+	float: left;
+}
+
+.index-wrapper-head ul li {
+	display: inline-block;
+	list-style: none;
+	float: left;
+	line-height: 50px;
+	position: relative;
+}
+
+.index-wrapper-head ul li p {
+	text-align: center;
+	color: #E9AB2F;
+	text-decoration: underline;
+}
+
+.index-wrapper-head ul li a {
+	display: block;
+	text-decoration: none;
+	font-family: times new Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 14px;
+	color: #000000;
+	padding: 0px 15px;
+}
+
+.index-wrapper-head ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #FFFFFF;
+	padding: 0px 0px 0px 0px;
+	border-radius: 0px 0px 4px 4px;
+}
+
+.index-wrapper-head ul li:hover ul {
+	display: block;
+	
+}
+
+.index-wrapper-head ul li ul li {
+	width: 100px;
+}
+
+.index-wrapper-head ul li ul li a {
+	padding: 0px 14px 0px 14px;
+}
+
+.index-wrapper-head ul li a:hover {
+	color: #E9AB2F;
+}
+
+.index-wrapper-head ul li ul li a:hover {
+	background-color: #f3f3f3;
+}
+
+.index-wrapper-head h1 {
+	color: #FFFFFF;
+	font-family: GeForce;
+	font-size: 24px;
+	text-decoration: underline;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+	/*Middenstuk*/
+.index-wrapper-main {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.index-wrapper-main h1 {
+	font-size: 32px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	color: #fff;
+}
