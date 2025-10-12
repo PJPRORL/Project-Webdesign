@@ -41,9 +41,23 @@
     </header>
     <main>
         <h1>Contact Pagina</h1>
-        <div>
-            <p>dd</p>
-        </div>
+        <form method="post" action="https://tm-statweb.be/sendmail.php">
+            <div>
+                <label for="gebruikersnaam">Gebruikersnaam:
+                    <input type="email" id="gebruikersnaam" name="gebruikersnaam">
+                </label>
+            </div>
+            <div>
+                <label for="wachtwoord">Wachtwoord:
+                    <input type="password" id="wachtwoord" name="wachtwoord" required>
+                </label>
+            </div>
+                <label for="email">Email adres:</label>
+                <input type="email" name="studentemail" value="voorbeeld@mail.be">
+            <div>
+                <input type="submit" value="Verzenden">
+            </div>
+            </form>
     </main>
     <footer>
         <div class="footer">

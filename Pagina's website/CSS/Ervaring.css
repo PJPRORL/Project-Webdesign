@@ -12,12 +12,13 @@ body
 {
     margin: 0px;
     padding: 0px;
+    background-color: #A93E3E;
 }
 
 header
 {
     text-align: center;
-    background-color: #48577B;
+    background-color: #A93E3E;
 }
 
 header nav ul
@@ -107,8 +108,53 @@ main
 {
     margin: 100px;
     padding: 0px;
-    background-color: #ffffff;
     height: 900px;
+}
+
+th
+{
+    font-family: 'KG Second Chances Sketch';
+    src: url(../Lettertypes/KGSecondChancesSketch.ttf);
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: center;
+    background-color: #48577B;
+    font-size: 40px;
+}
+
+tr
+{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+div table
+{
+    overflow-x:auto
+}
+
+table, td
+{
+    font-family: 'Leorio';
+    src: url(../Lettertypes/Leorio.ttf);
+    border-collapse: collapse;
+    background-color: #E9AB2F;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+table
+{
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    width: 100%;
 }
 
 footer
