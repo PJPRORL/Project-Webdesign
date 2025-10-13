@@ -19,66 +19,9 @@ body
     min-height: 100vh;
 }
 
+/* End HTML */
+
 /* Header */
-
-header
-{
-    text-align: center;
-    background-color: #48577B;
-}
-
-header nav ul
-{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    color: #48577B;
-    display: flex;
-}
-
-header nav ul li
-{
-    background-color:#E9AB2F;
-    padding: 20px;
-    margin-left: 0px;
-    display: inline-block;
-}
-
-header ul li ul
-{
-    display: none;
-    position: absolute;
-}
-
-header ul li:hover ul
-{
-    display: block;
-}
-
-header nav ul li ul li {
-	display: block;
-    width: 110px;
-}
-
-header nav ul li a
-{
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-    display: block;
-}
-
-header nav ul li a:hover
-{
-    color: #48577B;
-}
-
-img
-{
-    margin-bottom: 10px;
-    height: 50px;
-}
 
 h1
 {
@@ -94,6 +37,73 @@ p
     font-size: 20px;
 }
 
+/* End Header */
+
+/* Navigatiebalk */
+
+/* 0) Kleine basis */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; }
+
+.site-header {
+  background: #E9AB2F;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 1) De balk: links merk, rechts menu */
+.nav {
+  display: flex;              /* zet items op één rij */
+  flex-wrap: nowrap;            /* mag afbreken naar 2e regel als het krap wordt */
+  align-items: center;        /* verticaal centreren */
+  justify-content: space-between; /* ruimte tussen brand en menu */
+  padding: 0.5rem 1rem;       /* binnenmarge boven/onder en links/rechts */
+  gap: 0.5rem;                /* ruimte tussen elementen als ze wrappen */
+}
+
+/* 2) Merk/Logo */
+.brand {
+  display: flex;              /* logo + tekst naast elkaar */
+  align-items: center;
+  gap: 0.5rem;                /* ruimte tussen logo en tekst */
+  text-decoration: none;      /* geen onderlijn op de merk-link */
+  color: #111;              /* tekstkleur */
+}
+.brand img {
+  height: 36px;               /* LOGO-GROOTTE: dit is je “draaiknop” */
+  width: auto;
+}
+
+/* 3) Lijst met links (rechts) */
+.nav-list {
+  display: flex;              /* links naast elkaar */
+  flex-wrap: nowrap;          /* laat op 2 regels lopen bij smal scherm */
+  gap: 0.5rem;                /* afstand tussen links */
+  list-style: none;           /* bullet points weg */
+  margin: 0;                  /* standaard marge van ul weghalen */
+  padding: 0;                 /* standaard padding van ul weghalen */
+}
+
+/* 4) De linkjes zelf */
+.nav-list a {
+  display: block;             /* maakt padding klikbaar */
+  padding: 0.5rem 0.75rem;    /* KOPGROOTTE: “klik-gebied” */
+  text-decoration: none;      /* geen onderlijn */
+  color: #111;              /* tekstkleur */
+  border-radius: 6px;         /* zachte hoekjes */
+}
+.nav-list a:hover {
+  background: #f2f4f7;      /* hoverkleur */
+  height: 100%;
+}
+
+/* 5) Actieve pagina markeren (jij gebruikte .actief) */
+.nav-list .actief {
+  background: #A93E3E;      /* jouw kleur */
+  color: #fff;
+}
+
+/* End Navigatiebalk */
+
 /* Main */
 
 main
@@ -102,9 +112,17 @@ main
     padding: 0;
     background-color: aqua;
     width: 100%;
+    height: 100%;
     flex: 1 0 auto;
     min-height: 0;
 }
+
+.space
+{
+    margin: 150px;
+}
+
+/* end Main*/
 
 /* Footer */
 
@@ -113,12 +131,14 @@ footer
     margin: 0;
     padding: 1rem;
     text-align: center;
-    background-color: #48577B;
+    background-color: #E9AB2F;
     color: white;
     justify-content: center;
     align-items: center;
     display: flex;
 }
+
+/* End Footer */
 
 /* classes */
 
@@ -128,18 +148,32 @@ footer
     padding: 0px;
     width: 100%;
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 50px;
+    grid-template-columns: auto 1fr auto;
     grid-template-areas:
-        "header"
-        "main"
-        "footer";
+        "header header"
+        "main main"
+        "main main"
+        "footer footer";
     flex: 1 0 auto;
+    min-height: 100dvh;
 }
 
-.actief
+.header
 {
-    background-color: #A93E3E;
+    grid-area: header;
+}
+
+.main
+{
+    grid-area: main;
+    min-height: 0;
+}
+
+.footer
+{
+    grid-area: footer;
+    height: 50px;
 }
 
 .ul
@@ -148,34 +182,20 @@ footer
     margin-bottom: 0px;
 }
 
-.grid-container {
+.carousel-container {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 12px;
     padding: 16px;
     max-width: 1400px;
     margin: 0 auto;
+
 }
 
-
-/*Responsief webdesign*/
-@media (max-width: 1200px)
-{ .grid-container
-    { grid-template-columns: repeat(5, 1fr); }
+.carousel-container > main
+{
+    display: grid;
 }
-@media (max-width: 960px)
-{ .grid-container
-    { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 720px)
-{ .grid-container
-    { grid-template-columns: repeat(1, 1fr); }
-}
-@media (max-width: 480px)
-{ .grid-container
-    { grid-template-columns: 1fr; }
-}
-
 
 /* Elke tegel is een LINK die het hele vak inneemt */
 .tile {
@@ -211,3 +231,25 @@ footer
 /* Toegankelijk focus + hover animatie */
 .tile:focus-visible { box-shadow: 0 0 0 3px #fff, 0 0 0 5px #2563eb; }
 .tile:hover img { transform: scale(1.04); transition: transform .25s ease; }
+
+/* End classes */
+
+/* Responsief webdesign*/
+@media (max-width: 1200px)
+{ .carousel-container
+    { grid-template-columns: repeat(5, 1fr); }
+}
+@media (max-width: 960px)
+{ .carousel-container
+    { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px)
+{ .carousel-container
+    { grid-template-columns: repeat(1, 1fr); }
+}
+@media (max-width: 480px)
+{ .carousel-container
+    { grid-template-columns: 1fr; }
+}
+
+/* End Responsief webdesign */
