@@ -224,8 +224,14 @@ footer
     left: 0; right: 0; bottom: 0;
     padding: 10px 12px;
     font-weight: 700;
+    color: white;
+    font-size: 16px;
     letter-spacing: .2px;
     background: linear-gradient(transparent, rgba(0,0,0,.75));
+}
+
+.tile:hover::after {
+    color: orange;
 }
 
 /* Toegankelijk focus + hover animatie */
