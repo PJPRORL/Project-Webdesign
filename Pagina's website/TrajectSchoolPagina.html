@@ -1,55 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name= "author" content="Jeroen piussi"/>
-	<meta name= "copyright" content="2024 Thomas More"/>
-    <link href="CSS/TrajectSchool.css" rel="stylesheet"/>
-    <title>Traject School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jeroen piussi" />
+  <meta name="copyright" content="2025 Thomas More" />
+  <link href="CSS/TrajectSchool.css" rel="stylesheet" />
+  <title>Traject School</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="header">
-                <ul class="ul"><img src="../Assets website/Afbeeldingen/Logo.png" alt="Logo website"/></ul>
-                <ul>
-                    <li><a href="../index.html">Webdesign Project</a></li>
-                    <li><a href="./ContactPagina.html">Contact</a>
-                        <ul>
-                            <li>Hobby</li>
-                            <li><a href="./Pagina's website/ContactSubPaginas/Fitness.html">Fitness</a></li>
-                            <li><a href="./Pagina's website/ContactSubPaginas/ComputerHardware.html">Hardware</a></li>
-                            <li>Interesses</li>
-                            <li><a href="./Pagina's website/ContactSubPaginas/Formule1.html">Formule 1</a></li>
-                            <li><a href="./Pagina's website/ContactSubPaginas/Gamen.html">Gamen</a></li>
-                            <li><a href="/Pagina's website/ContactSubPaginas/TestenComputerHardware.html">Testen van Computer Hardware</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./CV.html">Curriculum Vitae</a></li>
-                    <li><a href="./Ervaring.html">Ervaring</a></li>
-                    <li class="actief"><a href="TrajectSchoolPagina.html">Traject School</a>
-                        <ul>
-                            <li><a href="./TrajectSchoolSubPaginas/Programmeren.html">Programmeren</a></li>
-                            <li><a href="./TrajectSchoolSubPaginas/Webdesign.html">Webdesign</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+  <div class="container">
+    <header class="site-header header">
+      <nav class="nav">
+        <a class="brand" href="../index.html">
+          <img src="../Assets website/Afbeeldingen/Logo.png" alt="Logo website" />
+        </a>
+        <ul class="nav-list" role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="actief" href="./TrajectSchoolPagina.html">Traject School</a></li>
+          <li><a href="./PrivéLeven.html">Privé Leven</a></li>
+          <li><a href="./Ervaring.html">Ervaring</a></li>
+          <li><a href="./CV.html">CV</a></li>
+          <li><a href="./ContactPagina.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-        <div>
-            <h1>Traject School</h1>
+
+    <main class="main">
+      <section class="space">
+        <h1>Traject School</h1>
+        <div class="grid-links">
+          <a class="tile" href="./TrajectSchoolSubPaginas/Programmeren.html" aria-label="Programmeren">
+            <img src="https://picsum.photos/id/1011/1000/1000" alt="Programmeren" />
+          </a>
+          <a class="tile" href="./TrajectSchoolSubPaginas/Webdesign.html" aria-label="Webdesign">
+            <img src="https://picsum.photos/id/1016/1000/1000" alt="Webdesign" />
+          </a>
+          <a class="tile" href="./TrajectSchoolSubPaginas/Databanken.html" aria-label="Databanken">
+            <img src="https://picsum.photos/id/1043/1000/1000" alt="Databanken" />
+          </a>
         </div>
-        <div>
-            
-        </div>
+      </section>
     </main>
-    <footer>
-        <div class="footer">
-            &copy Jeroen Piussi, Thomas More 2024, All rights reserved.
-        </div>
+
+    <footer class="footer">
+      <div>
+        &copy; Jeroen Piussi, Thomas More 2025, All rights reserved.
+      </div>
     </footer>
+  </div>
 </body>
+
 </html>
