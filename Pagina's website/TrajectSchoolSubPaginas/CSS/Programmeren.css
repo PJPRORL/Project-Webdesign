@@ -66,7 +66,8 @@ p {
 }
 
 .brand img {
-    height: 36px;
+    height: clamp(48px, 12vw, 128px);
+    /* LOGO-GROOTTE: schaalbaar met viewport */
     width: auto;
 }
 
