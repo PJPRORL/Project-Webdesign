@@ -1,3 +1,5 @@
+/* Inladen van nieuwe lettertypes */
+
 @font-face {
     font-family: 'KG Second Chances Sketch';
     src: url(../Lettertypes/KGSecondChancesSketch.ttf);
@@ -8,7 +10,13 @@
     src: url(../Lettertypes/Leorio.ttf);
 }
 
+/* End inladen van nieuwe lettertypes */
+
 /* HTML */
+
+html {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0px;
@@ -16,13 +24,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: system-ui, Arial, sans-serif;
 }
 
 /* End HTML */
 
 /* Header */
 
-h1 {
+h1, h2 {
     color: #C89Bff;
     font-family: 'KG Second Chances Sketch';
     font-size: 48px;
@@ -30,10 +39,7 @@ h1 {
 }
 
 h2 {
-    color: #C89Bff;
-    font-family: 'KG Second Chances Sketch';
     font-size: 36px;
-    text-align: center;
 }
 
 p {
@@ -46,17 +52,7 @@ p {
 
 /* Navigatiebalk */
 
-/* 0) Kleine basis */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: system-ui, Arial, sans-serif;
-}
-
-.site-header {
+.website-header {
     background: #0B1120;
     border-bottom: 1px solid #00D1D1;
 }
@@ -78,7 +74,7 @@ body {
 }
 
 /* 2) Merk/Logo */
-.brand {
+.logo {
     display: flex;
     /* logo + tekst naast elkaar */
     align-items: center;
@@ -90,9 +86,8 @@ body {
     /* tekstkleur */
 }
 
-.brand img {
-    height: clamp(48px, 12vw, 128px);
-    /* LOGO-GROOTTE: schaalbaar met viewport */
+.logo img {
+    height: clamp(48px, 12vw, 128px); /*Heb ik op moeten zoeken om dit ook schaalbaar te maken samen met de grote van het scherm.*/
     width: auto;
 }
 
@@ -223,24 +218,24 @@ footer {
 
 }
 
-.carousel-container>main {
+.carousel-container > main {
     display: grid;
 }
 
 /* Elke tegel is een LINK die het hele vak inneemt */
-.tile {
+.tegel {
     position: relative;
     display: block;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    border-radius: var(--radius);
+    border-radius: 10px;
     text-decoration: none;
     outline: none;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
 }
 
 /* Afbeelding vult de volledige tegel */
-.tile>img {
+.tegel > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -248,7 +243,7 @@ footer {
 }
 
 /* Label/ondertitel onderaan de tegel */
-.tile::after {
+.tegel::after {
     content: attr(aria-label);
     position: absolute;
     left: 0;
@@ -259,19 +254,18 @@ footer {
     color: white;
     font-size: 16px;
     letter-spacing: .2px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, .75));
+    background: #000;
 }
 
-.tile:hover::after {
+.tegel:hover {
+    box-shadow: 0 4px 100px #00D1D1;
+}
+
+.tegel:hover::after {
     color: #00D1D1;
 }
 
-/* Toegankelijk focus + hover animatie */
-.tile:focus-visible {
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #2563eb;
-}
-
-.tile:hover img {
+.tegel:hover img {
     transform: scale(1.04);
     transition: transform .25s ease;
 }
@@ -279,7 +273,7 @@ footer {
 /* End classes */
 
 /* Responsief webdesign*/
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
     .carousel-container {
         grid-template-columns: repeat(5, 1fr);
     }
