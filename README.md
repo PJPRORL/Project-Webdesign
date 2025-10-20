@@ -14,7 +14,7 @@ Welkom! In dit project bouw ik een persoonlijke website die meegroeit met mijn o
   - [Contact](#contact)
   - [Ervaring](#ervaring)
   - [Traject School](#traject-school)
-  - [Privé Leven](#privé-leven)
+  - [Over mij](#over-mij)
 - [Huisstijl & Design](#-huisstijl--design)
   - [Kleurenschema](#kleurenschema)
   - [Typografie](#typografie)
@@ -62,7 +62,7 @@ De homepagina geeft een korte uitleg over het project en toont welke secties je 
 - **Doel**: verdiepen in opleidingen en leerpaden.
 - **Inhoud**: welkomstpagina met keuze voor o.a. **Webdesign**, **Programmeren** en **Databanken**, inclusief **geleerde competenties** en voorbeelden. De look & feel leunt aan bij het Thomas More kleurbeeld, terwijl subpagina’s eigen accenten krijgen.
 
-### Privé Leven
+### Over mij
 
 - **Doel**: laten zien wie ik ben buiten school/werk.
 - **Inhoud**: **Hobby‑pagina’s** met elk een eigen stijl (binnen de huisstijl):

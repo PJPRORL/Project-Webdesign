@@ -17,7 +17,7 @@
 | --------------------------- | ------- | -------------------------------------------- | ------------------------------------------------------------- |
 | **Accent 1 – Cyan Blue**    | #00D1D1 | Links, hover-effecten, iconen                | Frisse kleur die levendigheid toevoegt zonder te fel te zijn. |
 | **Accent 2 – Lime Green**   | #A4FF5E | Kaarten, pictogrammen “Hobbies”              | Energiek, modern, goed zichtbaar op donker.                   |
-| **Accent 3 – Soft Purple**  | #C89BFF | Titel “Privé leven”                          | Elegant en professioneel accent voor headers.                 |
+| **Accent 3 – Soft Purple**  | #C89BFF | Titel “Over mij”                              | Elegant en professioneel accent voor headers.                 |
 | **Accent 4 – Amber Orange** | #FFB347 | Subtiele highlights (buttons, active states) | Warme tegenkleur voor evenwicht met de koele tonen.           |
 
 ---
