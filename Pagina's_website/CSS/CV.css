@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'KG Second Chances Sketch';
+    src: url(../../Assets_website/Lettertypes/KGSecondChancesSketch.ttf);
+}
+
+@font-face {
+    font-family: 'Leorio';
+    src: url(../../Assets_website/Lettertypes/Leorio.ttf);
+}
+
+/* Basis opmaak */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: system-ui, Arial, sans-serif;
+}
+
+h1 {
+    color: #C89Bff;
+    font-family: 'KG Second Chances Sketch';
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    color: #C89Bff;
+    font-family: 'KG Second Chances Sketch';
+    font-size: 36px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Leorio';
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Header / Navigatie (zelfde als Index) */
+.site-header {
+    background: #0B1120;
+    border-bottom: 1px solid #00D1D1;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #111;
+}
+
+.logo img {
+    height: 96px;
+    width: auto;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 720px) {
+    .nav-list {
+        flex-wrap: wrap;
+    }
+}
+
+.nav-list a {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.nav-list a:hover {
+    background: #1A2238;
+    color: #00D1D1;
+}
+
+.nav-list .actief {
+    background: #1A2238;
+    color: #00D1D1;
+}
+
+/* Layout grid */
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    flex: 1 0 auto;
+    min-height: 100vh;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    background-color: #0B1120;
+    width: 100%;
+    height: 100%;
+    flex: 1 0 auto;
+    min-height: 0;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    min-height: 0;
+}
+
+.footer {
+    grid-area: footer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0B1120;
+    color: #fff;
+    border-top: 1px solid #00D1D1;
+}
+
+.space {
+    margin: 150px;
+}
+
+@media (max-width: 720px) {
+    .space {
+        margin: 24px;
+    }
+}
+
+/* CV layout */
+.cv-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+}
+
+.cv-sidebar {
+    background: #1A2238;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.cv-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #2E3445;
+    display: block;
+}
+
+.cv-role {
+    color: #B0BCD0;
+    margin: 4px 0 12px 0;
+}
+
+.cv-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.cv-contact a {
+    color: #00D1D1;
+    text-decoration: none;
+}
+
+.cv-contact a:hover {
+    text-decoration: underline;
+}
+
+.cv-block {
+    margin-top: 16px;
+}
+
+.cv-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cv-main {
+    display: grid;
+    gap: 16px;
+}
+
+.cv-section {
+    background: #1A2238;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.cv-timeline {
+    display: grid;
+    gap: 12px;
+}
+
+.cv-item header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cv-item .period {
+    color: #B0BCD0;
+}
+
+.btn {
+    display: inline-block;
+    background: #00D1D1;
+    color: #0B1120;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn[aria-disabled="true"] {
+    opacity: .6;
+    pointer-events: none;
+}
+
+@media (max-width: 960px) {
+    .cv-layout {
+        grid-template-columns: 1fr;
+    }
+}

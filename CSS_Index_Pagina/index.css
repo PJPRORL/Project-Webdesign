@@ -1,0 +1,455 @@
+/* Inladen van nieuwe lettertypes */
+
+@font-face {
+    font-family: 'KG Second Chances Sketch';
+    src: url(../Assets_website/Lettertypes/KGSecondChancesSketch.ttf);
+}
+
+@font-face {
+    font-family: 'Leorio';
+    src: url(../Assets_website/Lettertypes/Leorio.ttf);
+}
+
+/* End inladen van nieuwe lettertypes */
+
+/* HTML */
+
+html {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: system-ui, Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+/* End HTML */
+
+/* Header */
+
+h1,
+h2 {
+    color: #C89Bff;
+    font-family: 'KG Second Chances Sketch';
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-family: 'Leorio';
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+/* End Header */
+
+/* Navigatiebalk */
+
+.website-header {
+    background-color: #0B1120;
+    border-bottom: 1px solid #00D1D1;
+}
+
+/* 1) De balk: links merk, rechts menu */
+.nav {
+    display: flex;
+    /* zet items op één rij */
+    flex-wrap: nowrap;
+    /* mag afbreken naar 2e regel als het krap wordt */
+    align-items: center;
+    /* verticaal centreren */
+    justify-content: space-between;
+    /* ruimte tussen brand en menu */
+    padding: 0.5rem 1rem;
+    /* binnenmarge boven/onder en links/rechts */
+    gap: 0.5rem;
+    /* ruimte tussen elementen als ze wrappen */
+}
+
+/* 2) Merk/Logo */
+.logo {
+    display: flex;
+    /* logo + tekst naast elkaar */
+    align-items: center;
+    gap: 0.5rem;
+    /* ruimte tussen logo en tekst */
+    text-decoration: none;
+    /* geen onderlijn op de merk-link */
+    color: #111;
+    /* tekstkleur */
+}
+
+.logo img {
+    height: 96px;
+    width: auto;
+}
+
+/* 3) Lijst met links (rechts) */
+.nav-list {
+    display: flex;
+    /* links naast elkaar */
+    flex-wrap: nowrap;
+    /* laat op 2 regels lopen bij smal scherm */
+    gap: 8px;
+    /* afstand tussen links */
+    list-style: none;
+    /* bullet points weg */
+    margin: 0;
+    /* standaard marge van ul weghalen */
+    padding: 0;
+    /* standaard padding van ul weghalen */
+}
+
+/* 4) De linkjes zelf */
+.nav-list a {
+    display: block;
+    /* maakt padding klikbaar */
+    padding: 8px 10px;
+    /* KOPGROOTTE: “klik-gebied” */
+    text-decoration: none;
+    /* geen onderlijn */
+    color: #FFFFFF;
+    /* tekstkleur */
+    border-radius: 6px;
+    /* zachte hoekjes */
+}
+
+.nav-list a:hover {
+    background: #1A2238;
+    /* hoverkleur */
+    color: #00D1D1;
+    height: 100%;
+}
+
+.nav-list a:focus {
+    outline: 2px solid #00D1D1;
+}
+
+/* 5) Actieve pagina markeren (jij gebruikte .actief) */
+.nav-list .actief {
+    background: #1A2238;
+    color: #00D1D1;
+}
+
+/* End Navigatiebalk */
+
+/* Main */
+
+main {
+    margin: 0;
+    padding: 0;
+    background-color: #0B1120;
+    width: 100%;
+    height: 100%;
+    flex: 1 0 auto;
+    min-height: 0;
+}
+
+.Center-text {
+    text-align: center;
+}
+
+.space {
+    margin: 150px 0px;
+}
+
+/* end Main*/
+
+/* Footer */
+
+footer {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: #0B1120;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-top: 1px solid #00D1D1;
+}
+
+/* End Footer */
+
+/* classes */
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "main main"
+        "footer footer";
+    flex: 1 0 auto;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    min-height: 0;
+}
+
+.footer {
+    grid-area: footer;
+    height: 50px;
+}
+
+.ul {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.carousel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 12px;
+    padding: 16px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.carousel-container>main {
+    display: grid;
+}
+
+/* Elke tegel is een LINK die het hele vak inneemt */
+.tegel {
+    position: relative;
+    display: block;
+    aspect-ratio: 1 / 1;
+    /* Deze zorgt ervoor dat de tegel altijd vierkant is. Dit heb ik moeten opzoeken, omdat width en height niet werkten op 100%.*/
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Afbeelding vult de volledige tegel */
+.tegel>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Label/ondertitel onderaan de tegel */
+.tegel::after {
+    content: attr(aria-label);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: .2px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .75));
+    background: #000;
+}
+
+.tegel:hover {
+    box-shadow: 0 4px 80px #00D1D1;
+}
+
+.tegel:hover::after {
+    color: #00D1D1;
+}
+
+.tegel:hover img {
+    transform: scale(1.1);
+    transition: transform 1s ease;
+}
+
+/* Generic button */
+.btn {
+    display: inline-block;
+    background-color: #00D1D1;
+    color: #0B1120;
+    border-radius: 12px;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: #00BCBC;
+}
+
+.btn:focus {
+    outline: 2px solid #00D1D1;
+}
+
+/* About section */
+.OverMij-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    max-width: 2400px;
+    margin: 0 auto 24px auto;
+}
+
+.OverMij {
+    background: #1A2238;
+    border: 3px dotted #00BCBC;
+    border-radius: 16px;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.OverMij-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.OverMij-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #2E3445;
+}
+
+.Sterktes-Zwaktes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* End classes */
+
+/* Responsief webdesign*/
+@media (max-width: 1440px) {
+    .carousel-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .OverMij-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1300px) {
+    .OverMij-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .OverMij-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 960px) {
+    .carousel-container {
+        grid-template-columns: 1fr;
+    }
+
+    .OverMij-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .OverMij-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 720px) {
+    .carousel-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 720px) {
+    .space {
+        margin: 24px;
+    }
+}
+
+/* Responsive typography */
+@media (max-width: 960px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* End Responsief webdesign */

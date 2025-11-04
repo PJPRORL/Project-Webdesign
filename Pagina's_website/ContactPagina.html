@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png"
+    href="../Assets_website/Afbeeldingen/Favicon_Website/Favicon Webdesign Project.png" />
+  <meta name="author" content="Jeroen piussi" />
+  <meta name="copyright" content="2025 Thomas More" />
+  <link href="CSS/ContactPagina.css" rel="stylesheet" />
+  <title>Contact Pagina</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header header">
+      <nav class="nav">
+        <a class="logo" href="../index.html">
+          <img src="../Assets_website/Afbeeldingen/Logo_Website/Webdesign Project Logo.png" alt="Logo website">
+        </a>
+        <ul class="nav-list" role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./TrajectSchoolPagina.html">Traject School</a></li>
+          <li><a href="./OverMij.html">Over mij</a></li>
+          <li><a href="./Ervaring.html">Ervaring</a></li>
+          <li><a href="./CV.html">CV</a></li>
+          <li><a class="actief" href="./ContactPagina.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="space">
+        <h1>Contact</h1>
+        <div class="contact-layout" aria-label="Contact en informatie">
+          <div class="contact-info">
+            <h2>Welkom!</h2>
+            <p>Ik woon in Beerse (BE) en volg Toegepaste Informatica aan Thomas More. Heb je vragen over mijn traject,
+              projecten of wil je gewoon even kennismaken? Stuur me gerust een bericht via het formulier.</p>
+
+            <div class="city">
+              <strong>Woonplaats</strong>
+              <p>Beerse, België</p>
+            </div>
+
+            <div>
+              <h3>Ontdek meer</h3>
+              <div class="tile-grid">
+                <a class="tegel" href="./over-mij/Hobby/Fitness.html" aria-label="Hobby: Fitness">
+                  <img src="../Assets_website/Afbeeldingen/0.4_OverMij/Unsplash_generic_Fitness.jpg"
+                    alt="Ga naar hobby Fitness" loading="lazy" />
+                </a>
+                <a class="tegel" href="./over-mij/Hobby/TestenComputerHardware.html"
+                  aria-label="Hobby: Testen Computer Hardware">
+                  <img src="../Assets_website/Afbeeldingen/0.4_OverMij/TestbankHardware.jpg"
+                    alt="Ga naar hobby Testen Computer Hardware" loading="lazy" />
+                </a>
+                <a class="tegel" href="./over-mij/Interesses/ComputerHardware.html"
+                  aria-label="Interesse: Computer Hardware">
+                  <img src="../Assets_website/Afbeeldingen/0.4_OverMij/HardwareCollection.jpg" Ga naar interesse
+                    Computer Hardware" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" method="post" action="https://tm-statweb.be/sendmail.php" novalidate>
+            <fieldset>
+              <legend>Neem contact op</legend>
+              <div class="form-row">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" required autocomplete="name" />
+              </div>
+              <div class="form-row">
+                <label for="email">E‑mail</label>
+                <input type="email" id="email" name="studentemail" required autocomplete="email" />
+              </div>
+              <div class="form-row">
+                <label for="onderwerp">Onderwerp</label>
+                <input type="text" id="onderwerp" name="onderwerp" />
+              </div>
+              <div class="form-row">
+                <label for="bericht">Bericht</label>
+                <textarea id="bericht" name="bericht" rows="6" required></textarea>
+              </div>
+              <div class="form-row checkbox-row">
+                <label class="checkbox">
+                  <input type="checkbox" id="privacy_ok" name="privacy_ok" required />
+                  Ik ga akkoord met de verwerking van mijn gegevens voor dit contact.
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="submit">Verzenden</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        &copy; Jeroen Piussi, Thomas More 2025, All rights reserved.
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
