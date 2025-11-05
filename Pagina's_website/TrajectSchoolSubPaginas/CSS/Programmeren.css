@@ -36,11 +36,52 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    color: #FFFFFF;
+}
+
+/* Lists */
+ul, ol {
+    color: #FFFFFF;
+}
+
+li {
+    color: #FFFFFF;
+}
+
+.list {
+    color: #FFFFFF;
+}
+
+.list li {
+    color: #FFFFFF;
+}
+
 p {
     font-family: 'Leorio';
     font-size: 20px;
     color: #ffffff;
 }
+
+/* Links */
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #00D1D1;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #00D1D1;
+    text-decoration-color: #00D1D1;
+}
+
+a:focus {
+    outline: 2px solid #00D1D1;
+    outline-offset: 2px;
+}
+
+/* End Links */
 
 /* Header / Navigatie */
 .site-header {
@@ -204,12 +245,15 @@ main {
 }
 
 .toc a {
-    color: #00D1D1;
-    text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #00D1D1;
+    text-underline-offset: 3px;
 }
 
 .toc a:hover {
-    text-decoration: underline;
+    color: #00D1D1;
+    text-decoration-color: #00D1D1;
 }
 
 .back-to-top {

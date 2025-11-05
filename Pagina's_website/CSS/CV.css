@@ -39,11 +39,44 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    color: #FFFFFF;
+}
+
+/* Lists */
+ul, ol {
+    color: #FFFFFF;
+}
+
+li {
+    color: #FFFFFF;
+}
+
 p {
     font-family: 'Leorio';
     font-size: 20px;
     color: #ffffff;
 }
+
+/* Links */
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #00D1D1;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #00D1D1;
+    text-decoration-color: #00D1D1;
+}
+
+a:focus {
+    outline: 2px solid #00D1D1;
+    outline-offset: 2px;
+}
+
+/* End Links */
 
 /* Header / Navigatie (zelfde als Index) */
 .site-header {
@@ -195,12 +228,15 @@ main {
 }
 
 .cv-contact a {
-    color: #00D1D1;
-    text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #00D1D1;
+    text-underline-offset: 3px;
 }
 
 .cv-contact a:hover {
-    text-decoration: underline;
+    color: #00D1D1;
+    text-decoration-color: #00D1D1;
 }
 
 .cv-block {
@@ -211,6 +247,11 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
+    color: #FFFFFF;
+}
+
+.cv-list li {
+    color: #FFFFFF;
 }
 
 .cv-main {
@@ -237,21 +278,6 @@ main {
 
 .cv-item .period {
     color: #B0BCD0;
-}
-
-.btn {
-    display: inline-block;
-    background: #00D1D1;
-    color: #0B1120;
-    padding: 10px 14px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.btn[aria-disabled="true"] {
-    opacity: .6;
-    pointer-events: none;
 }
 
 @media (max-width: 960px) {

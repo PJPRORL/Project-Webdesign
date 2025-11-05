@@ -45,6 +45,26 @@ p {
     color: #ffffff;
 }
 
+/* Links */
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #00D1D1;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #00D1D1;
+    text-decoration-color: #00D1D1;
+}
+
+a:focus {
+    outline: 2px solid #00D1D1;
+    outline-offset: 2px;
+}
+
+/* End Links */
+
 /* Header / Navigatie (zelfde als Index) */
 .site-header {
     background: #0B1120;
@@ -176,9 +196,22 @@ main {
     padding: 20px;
 }
 
+h3 {
+    color: #FFFFFF;
+}
+
+/* Lists */
+ul, ol {
+    color: #FFFFFF;
+}
+
+li {
+    color: #FFFFFF;
+}
+
 .contact-info h3,
 .contact-info h4 {
-    color: #C89Bff;
+    color: #FFFFFF;
     margin: 12px 0 8px 0;
 }
 

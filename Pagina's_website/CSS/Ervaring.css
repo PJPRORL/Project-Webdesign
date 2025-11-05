@@ -39,11 +39,44 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    color: #FFFFFF;
+}
+
+/* Lists */
+ul, ol {
+    color: #FFFFFF;
+}
+
+li {
+    color: #FFFFFF;
+}
+
 p {
     font-family: 'Leorio';
     font-size: 20px;
     color: #ffffff;
 }
+
+/* Links */
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #00D1D1;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #00D1D1;
+    text-decoration-color: #00D1D1;
+}
+
+a:focus {
+    outline: 2px solid #00D1D1;
+    outline-offset: 2px;
+}
+
+/* End Links */
 
 /* Header / Navigatie (zelfde als Index) */
 .site-header {
@@ -159,7 +192,6 @@ main {
     }
 }
 
-/* Tabel-styling (behouden en verbeterd) */
 .table-wrap {
     overflow-x: auto;
 }
@@ -185,11 +217,12 @@ td {
     padding: 10px;
 }
 
+/* Even rijen kleur geven. (Heb ik gevonden op internet) */
 tr:nth-child(even) td {
     background-color: #111833;
 }
 
-/* Layout additions */
+/* Stijl geven aan de kaarten (Inhoudsopgave en werkervaring) */
 .card {
     background: #1A2238;
     border-radius: 16px;
@@ -214,12 +247,15 @@ tr:nth-child(even) td {
 }
 
 .toc a {
-    color: #00D1D1;
-    text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #00D1D1;
+    text-underline-offset: 3px;
 }
 
 .toc a:hover {
-    text-decoration: underline;
+    color: #00D1D1;
+    text-decoration-color: #00D1D1;
 }
 
 .tags {
@@ -235,7 +271,7 @@ tr:nth-child(even) td {
     border: 1px solid #2E3445;
     border-radius: 999px;
     padding: 6px 10px;
-    color: #B0BCD0;
+    color: #FFFFFF;
 }
 
 .back-to-top {
