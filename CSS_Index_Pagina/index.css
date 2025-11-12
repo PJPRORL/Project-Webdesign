@@ -55,7 +55,8 @@ h3 {
 }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
     color: #FFFFFF;
 }
 
@@ -219,9 +220,24 @@ footer {
 
 /* End Footer */
 
+/* Bootstrap classes */
+
+.white-text {
+    color: #ffffff;
+}
+
+.jumbotron {
+    background-color: #0B1120;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* End Bootstrap classes */
+
 /* classes */
 
-.container {
+.site-container {
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -302,7 +318,6 @@ footer {
     font-size: 16px;
     letter-spacing: .2px;
     background: linear-gradient(transparent, rgba(0, 0, 0, .75));
-    background: #000;
 }
 
 .tegel:hover {
@@ -383,44 +398,12 @@ footer {
     .carousel-container {
         grid-template-columns: repeat(5, 1fr);
     }
-
-    .OverMij-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 1300px) {
-    .OverMij-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 1200px) {
-    .OverMij-grid {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 
 @media (max-width: 960px) {
     .carousel-container {
         grid-template-columns: 1fr;
-    }
-
-    .OverMij-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 720px) {
-    .OverMij-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 720px) {
-    .nav-list {
-        flex-wrap: wrap;
     }
 }
 

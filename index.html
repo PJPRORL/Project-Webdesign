@@ -12,13 +12,14 @@
     <title>Project Webdesign</title>
 
     <!-- Link naar CSS bestand -->
-    <link href="CSS_Index_Pagina/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS_Index_Pagina/index.css" />
 
 </head>
 
 <body>
-    <div class="container">
-        <header class="website-header header">
+    <div class="site-container col-xl-12 col-md-12 col-sm-12">
+        <header class="website-header header col-xl-12 col-md-12 col-sm-12">
             <nav class="nav">
                 <a class="logo" href="index.html">
                     <img src="./Assets_website/Afbeeldingen/Logo_Website/Webdesign_Project_Logo.png" alt="Logo website">
@@ -36,9 +37,9 @@
         <main class="main">
             <section class="space">
                 <div>
-                    <div>
-                        <h1>Project Webdesign</h1>
-                        <div class="Center-text">
+                    <div class="jumbotron">
+                        <div class="container Center-text">
+                            <h1 class="display-3">Project Webdesign</h1>
                             <p>Welkom op mijn website. Deze website heeft als doel, jou meer inzicht te geven over mijn
                                 traject op het school, als ook de ervaringen die ik al heb gehad in het werkveld.</p>
                             <p>Je zal op deze pagina kunnen navigeren naar mijn hobbies en interesses, maar ook naar de
@@ -48,19 +49,80 @@
                     </div>
                 </div>
             </section>
-            <section class="OverMij-grid">
-                <div class="OverMij">
-                    <h2>Wie ben ik?</h2>
-                    <div class="OverMij-content">
-                        <img class="OverMij-photo"
-                            src="./Assets_website/Afbeeldingen/0.1_Contact/IMG20240629215755-EDIT.jpg"
-                            alt="Foto van Jeroen Piussi" />
-                        <p>Ik ben Jeroen Piussi uit Beerse. Een leergierige, behulpzame en geduldige student Toegepaste
-                            Informatica met een passie voor technologie, hardware en webdesign.</p>
+            <section class="container">
+                <section>
+                    <div class="row featurette">
+                        <div class="col-lg-6 col-lg-3 col-md-6 col-md-3 col-sm-6">
+                            <h2 class="featurette-heading">Wie ben ik?... <span class="white-text">Kom meer
+                                    over
+                                    mij te weten</span></h2>
+                            <p class="lead">Ik ben Jeroen Piussi een student aan Thomas More Kempen in Geel.
+                                Voor het vak Webdesign kregen we een project waarin we een portfolio website moesten
+                                bouwen. Hiervoor heb ik deze website gemaakt. Ik heb een passie voor technologie,
+                                hardware en webdesign. Dit hoop ik ook te kunnen uitdragen in mijn toekomstige werk.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-lg-3 col-md-6 col-md-3 col-sm-6">
+                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                width="500" height="500" xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                                aria-label="Placeholder: 500x500"
+                                style="background-image: url('./Assets_website/Afbeeldingen/0.1_Contact/Opleidingsfoto.jpg'); background-size: cover; background-position: center;">
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="container">
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 space">
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi bg-info" width="1em" height="1em" aria-hidden="true">
+                                <use
+                                    xlink:href="./Assets_website/Afbeeldingen/Favicon_Website/Favicon_Webdesign_Project.png">
+                                </use>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Sterktes & Zwaktes</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+                                another sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">Primary button</a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                <use xlink:href="#cpu-fill"></use>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Interesses & Hobbies</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+                                another sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">Primary button</a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                <use xlink:href="#tools"></use>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Studies & Ervaring</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+                                another sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">Primary button</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="OverMij">
+            </section>
+            <!-- <section class="OverMij-grid container row">
+                <div class="OverMij col-xl-12 col-md-12 col-sm-12">
                     <h2>Waar ben ik goed/slecht in?</h2>
                     <div class="Sterktes-Zwaktes">
                         <div>
@@ -81,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="OverMij">
+                <div class="OverMij col-xl-12 col-md-12 col-sm-12">
                     <h2>Interesses & Hobbies</h2>
                     <ul>
                         <li>Interesses: <a href="./Pagina's_website/over-mij/Interesses/ComputerHardware.html">Computer
@@ -93,19 +155,84 @@
                     </ul>
                 </div>
 
-                <div class="OverMij">
+                <div class="OverMij col-xl-12 col-md-12 col-sm-12">
                     <h2>Studies & Ervaring</h2>
                     <p>Ik studeer Toegepaste Informatica aan Thomas More. Eerder deed ik ervaring op in o.a. technische
                         dienst en customer care. Meer weten? Bekijk mijn <a
                             href="./Pagina's_website/Ervaring.html">ervaring</a> of mijn <a
                             href="./Pagina's_website/CV.html">CV</a>.</p>
                 </div>
-            </section>
+            </section> -->
             <section>
                 <h2>Navigeer om meer te weten te komen over het project</h2>
             </section>
-            <section class="space">
-                <div class="carousel-container space">
+            <section class="container">
+                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                    <div class="col tegel">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('./Assets_website/Afbeeldingen/0._Index/ContactPage.png'); background-size: cover; background-position: center;">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto"> <img src="https://github.com/twbs.png" alt="Bootstrap"
+                                            width="32" height="32" class="rounded-circle border border-white"> </li>
+                                    <li class="d-flex align-items-center me-3"> <svg class="bi me-2" width="1em"
+                                            height="1em" role="img" aria-label="Location">
+                                            <use xlink:href="#geo-fill"></use>
+                                        </svg> <small>Earth</small> </li>
+                                    <li class="d-flex align-items-center"> <svg class="bi me-2" width="1em" height="1em"
+                                            role="img" aria-label="Duration">
+                                            <use xlink:href="#calendar3"></use>
+                                        </svg> <small>3d</small> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col tegel">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('./Assets_website/Afbeeldingen/0._Index/Ervaring.jpg'); background-size: cover; background-position: center;">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to
+                                    multiple lines</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto"> <img src="https://github.com/twbs.png" alt="Bootstrap"
+                                            width="32" height="32" class="rounded-circle border border-white"> </li>
+                                    <li class="d-flex align-items-center me-3"> <svg class="bi me-2" width="1em"
+                                            height="1em" role="img" aria-label="Location">
+                                            <use xlink:href="#geo-fill"></use>
+                                        </svg> <small>Pakistan</small> </li>
+                                    <li class="d-flex align-items-center"> <svg class="bi me-2" width="1em" height="1em"
+                                            role="img" aria-label="Duration">
+                                            <use xlink:href="#calendar3"></use>
+                                        </svg> <small>4d</small> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col tegel">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('./Assets_website/Afbeeldingen/0._Index/CurriculumVitae.jpg'); background-size: cover; background-position: center;">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto"> <img src="https://github.com/twbs.png" alt="Bootstrap"
+                                            width="32" height="32" class="rounded-circle border border-white"> </li>
+                                    <li class="d-flex align-items-center me-3"> <svg class="bi me-2" width="1em"
+                                            height="1em" role="img" aria-label="Location">
+                                            <use xlink:href="#geo-fill"></use>
+                                        </svg> <small>California</small> </li>
+                                    <li class="d-flex align-items-center"> <svg class="bi me-2" width="1em" height="1em"
+                                            role="img" aria-label="Duration">
+                                            <use xlink:href="#calendar3"></use>
+                                        </svg> <small>5d</small> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="space">
+                <div class="carousel-container">
                     <a class="tegel" href="./Pagina's_website/ContactPagina.html" aria-label="Contact">
                         <img src="./Assets_website/Afbeeldingen/0._Index/ContactPage.png" alt="Ga naar Contact" />
                     </a>
@@ -123,7 +250,7 @@
                         <img src="./Assets_website/Afbeeldingen/0._Index/AboutMePage.png" alt="Ga naar Over mij" />
                     </a>
                 </div>
-            </section>
+            </section> -->
         </main>
 
         <footer class="footer">
@@ -132,6 +259,7 @@
             </div>
         </footer>
     </div>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
