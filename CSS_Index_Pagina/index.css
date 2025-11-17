@@ -222,15 +222,71 @@ footer {
 
 /* Bootstrap classes */
 
-.white-text {
-    color: #ffffff;
-}
-
 .jumbotron {
     background-color: #0B1120;
     border-radius: 10px;
     padding: 20px;
     margin: 20px;
+}
+
+.text-body-emphasis {
+    color: #FFFFFF;
+}
+
+.about-cards {
+    /* Kleuren uit Modern Contrast Harmony */
+    --bs-emphasis-color: #FFFFFF;
+    /* Voor .text-body-emphasis */
+    --bs-body-color: #FDF6E4;
+    /* Normale tekst */
+    --bs-secondary-bg: #1A2238;
+    /* Surface kleur */
+    --bs-secondary-bg-rgb: 26, 34, 56;
+    /* Zelfde in rgb voor bg-body-secondary */
+
+    /* Knoppen (btn-primary) */
+    --bs-btn-bg: #00D1D1;
+    --bs-btn-border-color: #00D1D1;
+    --bs-btn-color: #0B1120;
+
+    --bs-btn-hover-bg: #A4FF5E;
+    --bs-btn-hover-border-color: #A4FF5E;
+    --bs-btn-hover-color: #0B1120;
+}
+
+.about-card {
+    background-color: #1A2238;
+    /* surface */
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #2E3445;
+    /* dark gray */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 34, 56, 0.4);
+    z-index: 0;
+}
+
+.about-card>div {
+    position: relative;
+    z-index: 1;
+}
+
+.about-card h3,
+.about-card .about-card-p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.about-card-p {
+    font-size: 16px;
+    color: #FFFFFF;
 }
 
 /* End Bootstrap classes */
