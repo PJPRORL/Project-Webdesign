@@ -63,7 +63,7 @@ a:focus {
     outline-offset: 2px;
 }
 
-/* End Links */
+/* Einde Links */
 
 /* Header / Navigatie (zelfde als Index) */
 .site-header {
@@ -100,6 +100,64 @@ a:focus {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.navbar-toggler {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    /* Pas aan aan tekstkleur */
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .navbar-toggler {
+        display: block;
+        order: 1;
+        /* Knop naar rechts */
+    }
+
+    .logo {
+        order: 0;
+        /* Logo naar links */
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 2;
+        /* Menu onderaan */
+
+        /* Animatie startstatus */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+        /* Uitlijning: Rechts uitlijnen */
+        align-items: flex-end;
+        padding-top: 0;
+    }
+
+    .nav-list.show {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 1rem;
+    }
+
+    .nav-list a {
+        text-align: right;
+        width: auto;
+        padding: 10px 0;
+    }
 }
 
 @media (max-width: 720px) {
@@ -182,7 +240,7 @@ main {
     }
 }
 
-/* Contact layout */
+/* Contact lay-out */
 .contact-layout {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -200,8 +258,9 @@ h3 {
     color: #FFFFFF;
 }
 
-/* Lists */
-ul, ol {
+/* Lijsten */
+ul,
+ol {
     color: #FFFFFF;
 }
 
@@ -281,7 +340,7 @@ li {
     color: #00D1D1;
 }
 
-/* Contact form */
+/* Contactformulier */
 .contact-form {
     background: #1A2238;
     border-radius: 16px;

@@ -10,7 +10,7 @@
     src: url(../Assets_website/Lettertypes/Leorio.ttf);
 }
 
-/* End inladen van nieuwe lettertypes */
+/* Einde inladen van nieuwe lettertypes */
 
 /* HTML */
 
@@ -34,9 +34,9 @@ body {
     color: #FFFFFF;
 }
 
-/* End HTML */
+/* Einde HTML */
 
-/* Header */
+/* Hoofding */
 
 h1,
 h2 {
@@ -54,12 +54,9 @@ h3 {
     color: #FFFFFF;
 }
 
-/* Lists */
+/* Lijsten */
 ul,
-ol {
-    color: #FFFFFF;
-}
-
+ol,
 li {
     color: #FFFFFF;
 }
@@ -88,9 +85,9 @@ a:focus {
     outline-offset: 2px;
 }
 
-/* End Links */
+/* Einde Links */
 
-/* End Header */
+/* Einde Hoofding */
 
 /* Navigatiebalk */
 
@@ -116,7 +113,10 @@ a:focus {
 }
 
 /* 2) Merk/Logo */
+/* attribuut order toegevoegd zodat bij het inklappen van het menu, dat de knop bij het aanklikken niet verspringt naar de linker kant.
+   Anders springt de knop altijd van de rechterkant naar de linker kant (heb ik moeten opzoeken).*/
 .logo {
+    order: 0;
     display: flex;
     /* logo + tekst naast elkaar */
     align-items: center;
@@ -135,6 +135,7 @@ a:focus {
 
 /* 3) Lijst met links (rechts) */
 .nav-list {
+    order: 1;
     display: flex;
     /* links naast elkaar */
     flex-wrap: nowrap;
@@ -147,6 +148,28 @@ a:focus {
     /* standaard marge van ul weghalen */
     padding: 0;
     /* standaard padding van ul weghalen */
+}
+
+
+.navbar-toggler {
+    order: 2;
+    display: none;
+    /* Verborgen op desktop */
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    color: #00D1D1;
+}
+
+.navbar-toggler:hover {
+    color: #00D1D1;
 }
 
 /* 4) De linkjes zelf */
@@ -180,7 +203,59 @@ a:focus {
     color: #00D1D1;
 }
 
-/* End Navigatiebalk */
+/* Navbar collapse bij kleine schermen */
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .navbar-toggler {
+        display: block;
+        order: 1;
+        /* Knop naar rechts */
+    }
+
+    .logo {
+        order: 0;
+        /* Logo naar links */
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 2;
+        /* Menu onderaan */
+
+        /* Animatie startstatus */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+        /* Uitlijning: Rechts uitlijnen */
+        align-items: flex-end;
+        padding-top: 0;
+        /* Padding verwijderen indien gesloten */
+    }
+
+    .nav-list.show {
+        max-height: 500px;
+        /* Aanpassen op basis van inhoudshoogte */
+        opacity: 1;
+        padding-top: 1rem;
+    }
+
+    .nav-list a {
+        text-align: right;
+        width: auto;
+        /* Laat inhoud wrappen, of gebruik 100% en tekst rechts uitlijnen */
+        padding: 10px 0;
+    }
+}
+
+
+/* Einde Navigatiebalk */
 
 /* Main */
 
@@ -202,9 +277,9 @@ main {
     margin: 150px 0px;
 }
 
-/* end Main*/
+/* Einde Hoofdinhoud */
 
-/* Footer */
+/* Voettekst */
 
 footer {
     margin: 0;
@@ -218,7 +293,7 @@ footer {
     border-top: 1px solid #00D1D1;
 }
 
-/* End Footer */
+/* Einde Voettekst */
 
 /* Bootstrap classes */
 
@@ -261,16 +336,19 @@ footer {
     padding: 1.5rem;
     border: 1px solid #2E3445;
     /* dark gray */
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
     position: relative;
     overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .about-card::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(26, 34, 56, 0.4);
+    background: rgba(26, 34, 56, 0.6);
     z-index: 0;
 }
 
@@ -289,7 +367,7 @@ footer {
     color: #FFFFFF;
 }
 
-/* End Bootstrap classes */
+/* Einde Bootstrap classes */
 
 /* classes */
 
@@ -447,7 +525,7 @@ footer {
     gap: 16px;
 }
 
-/* End classes */
+/* Einde classes */
 
 /* Responsief webdesign*/
 @media (max-width: 1440px) {
@@ -489,7 +567,7 @@ footer {
     }
 }
 
-/* Responsive typography */
+/* Responsieve typografie */
 @media (max-width: 960px) {
     h1 {
         font-size: 40px;
@@ -524,4 +602,4 @@ footer {
     }
 }
 
-/* End Responsief webdesign */
+/* Einde Responsief webdesign */

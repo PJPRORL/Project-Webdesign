@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 
 <head>
@@ -9,6 +9,7 @@
   <meta name="author" content="Jeroen piussi" />
   <meta name="copyright" content="2025 Thomas More" />
   <link href="CSS/OverMij.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../Assets_website/Bootstrap/Bootstrap-Iconen/bootstrap-icons.css" />
   <title>Over mij</title>
 </head>
 
@@ -19,18 +20,51 @@
         <a class="logo" href="../index.html">
           <img src="../Assets_website/Afbeeldingen/Logo_Website/Webdesign_Project_Logo.png" alt="Logo website" />
         </a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
         <ul class="nav-list" role="list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="./TrajectSchoolPagina.html">Traject School</a></li>
-          <li><a class="actief" href="./OverMij.html">Over mij</a>
-            <ul>
-              <li><a href="./over-mij/Hobby/Fitness.html">Hobby: Fitness</a></li>
-              <li><a href="./over-mij/Hobby/TestenComputerHardware.html">Hobby: Testen Computer Hardware</a></li>
-              <li><a href="./over-mij/Interesses/ComputerHardware.html">Interesse: Computer Hardware</a></li>
-              <li><a href="./over-mij/Interesses/Formule1.html">Interesse: Formule 1</a></li>
-              <li><a href="./over-mij/Interesses/Gamen.html">Interesse: Gamen</a></li>
+          <!-- Scheiding voorbeeldcode -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" aria-haspopup="true">
+              Over mij
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="./over-mij/Hobby/Fitness.html">Hobby: Fitness</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./over-mij/Hobby/TestenComputerHardware.html">Hobby: Testen Computer
+                  Hardware</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./over-mij/Interesses/ComputerHardware.html">Interesse: Computer
+                  Hardware</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./over-mij/Interesses/Formule1.html">Interesse: Formule 1</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./over-mij/Interesses/Gamen.html">Interesse: Gamen</a>
+              </li>
             </ul>
           </li>
+          <!-- Scheiding voorbeeldcode -->
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./OverMij.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true">
+              Over mij
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              
+              
+              
+              
+            </div>
+          </li> -->
           <li><a href="./Ervaring.html">Ervaring</a></li>
           <li><a href="./CV.html">CV</a></li>
           <li><a href="./ContactPagina.html">Contact</a></li>
@@ -49,8 +83,8 @@
               Beerse. Ik ben een sociale, behulpzame en geduldige persoon die
               graag nieuwe dingen leert. In mijn vrije tijd speel ik games,
               luister ik naar muziek, kijk ik series en films, en ga ik graag
-              wandelen in de natuur. Ik heb gekozen voor de opleiding Toegepaste Informatica omdat ik
-              een passie hier voor heb.
+              wandelen in de natuur. Ik heb gekozen voor de opleiding
+              Toegepaste Informatica omdat ik een passie hier voor heb.
             </p>
             <section>
               <img src="../Assets_website/Afbeeldingen/0.1_Contact/IMG20240629215755-EDIT.jpg"
@@ -61,7 +95,7 @@
           <section class="center-iframe">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8252.851890210708!2d4.856118877539332!3d51.32239772420034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6addb07c14ad5%3A0x19e4c93df81ff356!2sVrijwilligersstraat%2055%2C%202340%20Beerse!5e1!3m2!1snl!2sbe!4v1762159681923!5m2!1snl!2sbe"
-              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+              width="100%" height="350" style="border: 0" allowfullscreen="" loading="lazy"
               aria-placeholder="Google Maps" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </section>
@@ -71,8 +105,8 @@
         <div class="OverHuisdieren-info">
           <h2>Over mijn huisdieren</h2>
           <p>
-            Ik heb twee huisdieren, Marie en Toulouse. Dit zijn 2 katten. Ze zijn beide erg lieve
-            dieren en maken ons dagelijks leven erg leuk.
+            Ik heb twee huisdieren, Marie en Toulouse. Dit zijn 2 katten. Ze
+            zijn beide erg lieve dieren en maken ons dagelijks leven erg leuk.
           </p>
         </div>
         <div class="OverHuisdieren-img-container">
@@ -110,9 +144,27 @@
     </main>
 
     <footer class="footer">
-      <div>&copy; Jeroen Piussi, Thomas More 2025, All rights reserved.</div>
+      <section class="row">
+        <div class="col-xl-6 col-md-6">
+          &copy; Jeroen Piussi, Thomas More 2025, All rights reserved.
+        </div>
+        <div class="col-xl-6 col-md-6">
+          Kom ook eens kijken op mijn sociale media:
+          <svg class="bi facebook-icon" width="1em" height="1em" role="img" aria-label="Facebook">
+            <use xlink:href="../Assets_website/Bootstrap/Bootstrap-Iconen/svgs/facebook.svg"></use>
+          </svg>
+          <svg class="bi youtube-icon" width="1em" height="1em" role="img" aria-label="youtube">
+            <use xlink:href="../Assets_website/Bootstrap/Bootstrap-Iconen/svgs/youtube.svg"></use>
+          </svg>
+          <svg class="bi x-icon" width="1em" height="1em" role="img" aria-label="x">
+            <use xlink:href="../Assets_website/Bootstrap/Bootstrap-Iconen/svgs/instagram.svg"></use>
+          </svg>
+        </div>
+      </section>
     </footer>
   </div>
+  <script src="../Assets_website/Bootstrap/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+  <script src="../Assets_website/JS/navbar.js"></script>
 </body>
 
 </html>

@@ -19,9 +19,9 @@ body {
     font-family: system-ui, Arial, sans-serif;
 }
 
-/* End HTML */
+/* Einde HTML */
 
-/* Header */
+/* Hoofding */
 
 h1 {
     color: #C89Bff;
@@ -43,7 +43,7 @@ p {
     color: #ffffff;
 }
 
-/* End Header */
+/* Einde Hoofding */
 
 /* Navigatiebalk */
 
@@ -148,7 +148,7 @@ body {
     color: #00D1D1;
 }
 
-/* End Navigatiebalk */
+/* Einde Navigatiebalk */
 
 /* Main */
 
@@ -177,9 +177,9 @@ main {
     }
 }
 
-/* end Main*/
+/* Einde Hoofdinhoud */
 
-/* Footer */
+/* Voettekst */
 
 footer {
     margin: 0;
@@ -193,7 +193,7 @@ footer {
     border-top: 1px solid #00D1D1;
 }
 
-/* End Footer */
+/* Einde Voettekst */
 
 /* classes */
 
@@ -295,7 +295,7 @@ footer {
     transition: transform .25s ease;
 }
 
-/* End classes */
+/* Einde classes */
 
 /* Responsief webdesign*/
 @media (max-width: 1200px) {
@@ -322,4 +322,4 @@ footer {
     }
 }
 
-/* End Responsief webdesign */
+/* Einde Responsief webdesign */

@@ -9,6 +9,7 @@
   <meta name="author" content="Jeroen piussi" />
   <meta name="copyright" content="2025 Thomas More" />
   <link href="CSS/ContactPagina.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../Assets_website/Bootstrap/Bootstrap-Iconen/bootstrap-icons.css" />
   <title>Contact Pagina</title>
 </head>
 
@@ -19,6 +20,9 @@
         <a class="logo" href="../index.html">
           <img src="../Assets_website/Afbeeldingen/Logo_Website/Webdesign_Project_Logo.png" alt="Logo website">
         </a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
         <ul class="nav-list" role="list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="./TrajectSchoolPagina.html">Traject School</a></li>
@@ -100,11 +104,26 @@
     </main>
 
     <footer class="footer">
-      <div>
-        &copy; Jeroen Piussi, Thomas More 2025, All rights reserved.
-      </div>
+      <section class="row">
+        <div class="col-xl-6 col-md-6">
+          &copy; Jeroen Piussi, Thomas More 2025, All rights reserved.
+        </div>
+        <div class="col-xl-6 col-md-6">
+          Kom ook eens kijken op mijn sociale media:
+          <svg class="bi facebook-icon" width="1em" height="1em" role="img" aria-label="Facebook">
+            <use xlink:href="../Assets_website/Bootstrap/Bootstrap-Iconen/svgs/facebook.svg"></use>
+          </svg>
+          <svg class="bi youtube-icon" width="1em" height="1em" role="img" aria-label="youtube">
+            <use xlink:href="../Assets_website/Bootstrap/Bootstrap-Iconen/svgs/youtube.svg"></use>
+          </svg>
+          <svg class="bi x-icon" width="1em" height="1em" role="img" aria-label="x">
+            <use xlink:href="../Assets_website/Bootstrap/Bootstrap-Iconen/svgs/instagram.svg"></use>
+          </svg>
+        </div>
+      </section>
     </footer>
   </div>
+  <script src="../Assets_website/JS/navbar.js"></script>
 </body>
 
 </html>
